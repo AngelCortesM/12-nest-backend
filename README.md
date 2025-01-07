@@ -19,6 +19,7 @@
 2. Instala las dependencias:
    ```bash
    npm install
+   npm install @nestjs/config
    ```
 
 3. Configura las variables de entorno:
