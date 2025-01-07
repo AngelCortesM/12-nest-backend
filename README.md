@@ -20,6 +20,7 @@
    ```bash
    npm install
    npm install @nestjs/config
+   npm install -g @nestjs/cli 
    ```
 
 3. Configura las variables de entorno:
