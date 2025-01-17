@@ -48,10 +48,13 @@ export class AuthController {
   }
 
   @UseGuards(AuthGuard)
-  @Get('/check-token')
-  checkToken(@Request() req: Request): LoginResponse {
+  @Get('check-token')
+  async checkToken(@Request() req: Request): Promise<LoginResponse> {
     const user = req['user'] as User;
-    return { user, token: this.authService.getJwtToken({ id: user._id }) }; // Adjust the response as per your LoginResponse structure
+    return {
+      user,
+      token: this.authService.getJwtToken({ id: user._id }),
+    }; // Adjust the response as per your LoginResponse structure
   }
 
   // // @Get(':id')
